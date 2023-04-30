@@ -1,0 +1,17 @@
+name: Listenery
+version: 1.0
+main: listenery.MainListenery
+api-version: 1.18
+
+commands:
+  -endMec:
+  -excalibur:
+  -kladivo:
+  -magickaHulka:
+  -duhovaOvecka:
+  -liskaBystrouska:
+  -diaBoty:
+  -bleskovaHelma:
+  -sekera:
+  -motyka:
+  -netherPortal:
