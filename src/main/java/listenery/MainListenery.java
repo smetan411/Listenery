@@ -29,6 +29,8 @@ public final class MainListenery extends JavaPlugin {
         getCommand("-sekera").setExecutor(new Sekera());
         getCommand("-motyka").setExecutor(new Sekera());
         getCommand("-netherPortal").setExecutor(new PortalDoNetheru());
+        getCommand("-ohnivaHulka").setExecutor(new OhnivaHulka());
+
 
 
         // listenery
@@ -44,6 +46,7 @@ public final class MainListenery extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new SekeraListener(), this);
         getServer().getPluginManager().registerEvents(new KladivoListener(), this);
         getServer().getPluginManager().registerEvents(new TeleportHrace(), this);
+        getServer().getPluginManager().registerEvents(new OhnivaHulkaListener(), this);
     }
 
 
