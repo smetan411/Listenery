@@ -46,7 +46,7 @@ public final class MainListenery extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new SekeraListener(), this);
         getServer().getPluginManager().registerEvents(new KladivoListener(), this);
         getServer().getPluginManager().registerEvents(new TeleportHrace(), this);
-        getServer().getPluginManager().registerEvents(new OhnivaHulkaListener(), this);
+        getServer().getPluginManager().registerEvents(new OhnivaHulkaListener(this), this);
     }
 
 

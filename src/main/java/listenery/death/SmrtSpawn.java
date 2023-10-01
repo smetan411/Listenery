@@ -14,7 +14,7 @@ public class SmrtSpawn implements Listener {
    @EventHandler
     public void smrtEntity(EntityDeathEvent smrt) {
         String jmenoZemreleEntity = smrt.getEntity().getCustomName(); //.getName()
-        if (jmenoZemreleEntity.equals("Bystrouska")) {
+        if (jmenoZemreleEntity != null && jmenoZemreleEntity.equals("Bystrouska")) {
             World svet = smrt.getEntity().getWorld();
             Location misto = smrt.getEntity().getLocation();
             svet.spawnEntity(misto.add(5,0,5), EntityType.WITHER_SKELETON);
