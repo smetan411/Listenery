@@ -10,7 +10,13 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
-public class ChuzeDiamant implements Listener {
+public class ChuzeDiaMizeni implements Listener {
+
+    private final Plugin plugin;  // mizeni
+
+    public ChuzeDiaMizeni(Plugin plugin) {
+        this.plugin = plugin;
+    }  // mizeni
 
     @EventHandler
     public void diamondMove(PlayerMoveEvent event) {
@@ -22,7 +28,17 @@ public class ChuzeDiamant implements Listener {
             Location polohaBot = event.getFrom();
             Location polohaBloku = polohaBot.add(0, -1, 0);
             Block aktualniBlok = event.getPlayer().getWorld().getBlockAt(polohaBloku);
+            Material puvodniBlok = aktualniBlok.getType(); //mizeni
+            if (aktualniBlok.getType().equals(Material.DIAMOND_BLOCK)) { //mizeni
+                return;
+            }
             aktualniBlok.setType(Material.DIAMOND_BLOCK);
+            //mizeni casovac
+            new BukkitRunnable() {
+                @Override
+                public void run() { aktualniBlok.setType(puvodniBlok);
+                }
+            }.runTaskLater(plugin, 40);
         }
     }
 }

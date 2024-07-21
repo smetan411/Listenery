@@ -22,7 +22,9 @@ public class BleskovaHelma extends PlayerCommandExecutor {
         vlastnost.setUnbreakable(true);
         vlastnost.setDisplayName("BleskovaHelma");
         helma.setItemMeta(vlastnost);
+
         player.getInventory().addItem(helma);
+        player.getInventory().setHelmet(helma);
         return true;
     }
 }

@@ -12,7 +12,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class Drops implements Listener {
     @EventHandler
-    public static void smrtEntity(EntityDeathEvent smrt) {
+    public void smrtEntity(EntityDeathEvent smrt) {
         ItemStack perla = new ItemStack(Material.ENDER_PEARL, 16);
         ItemStack jablko = new ItemStack(Material.ENCHANTED_GOLDEN_APPLE, 64);
         Entity killer = smrt.getEntity().getKiller();

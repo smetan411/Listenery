@@ -4,6 +4,7 @@ import listenery.damage.*;
 import listenery.death.SmrtSpawn;
 import listenery.death.SmrtPojmenovaneEntity;
 import listenery.death.Drops;
+import listenery.move.ChuzeDiaMizeni;
 import listenery.move.ChuzeDiamant;
 import listenery.move.TeleportHrace;
 import listenery.target.BleskHelmaListener;
@@ -15,8 +16,9 @@ public final class MainListenery extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        World world = getServer().getWorlds().get(0);
+       // World world = getServer().getWorlds().get(0);
         getPlugin(MainListenery.class).getLogger().info("plugin enabled");
+
         // komandy
         getCommand("-endMec").setExecutor(new EndMec());
         getCommand("-excalibur").setExecutor(new Excalibur());
@@ -31,16 +33,17 @@ public final class MainListenery extends JavaPlugin {
         getCommand("-netherPortal").setExecutor(new PortalDoNetheru());
         getCommand("-ohnivaHulka").setExecutor(new OhnivaHulka());
 
-
-
         // listenery
+        getServer().getPluginManager().registerEvents(new ChuzeDiamant(), this);
+        getServer().getPluginManager().registerEvents(new ChuzeDiaMizeni(this), this);
+
         getServer().getPluginManager().registerEvents(new EndMecListener(), this);
         getServer().getPluginManager().registerEvents(new ExcaliburListener(), this);
         getServer().getPluginManager().registerEvents(new MotykaListener(), this);
         getServer().getPluginManager().registerEvents(new MagickaHulkaListener(), this);
         getServer().getPluginManager().registerEvents(new SmrtSpawn(), this);
         getServer().getPluginManager().registerEvents(new Drops(), this);
-        getServer().getPluginManager().registerEvents(new ChuzeDiamant(), this);
+
         getServer().getPluginManager().registerEvents(new BleskHelmaListener(), this);
         getServer().getPluginManager().registerEvents(new SmrtPojmenovaneEntity(), this);
         getServer().getPluginManager().registerEvents(new SekeraListener(), this);
@@ -48,6 +51,4 @@ public final class MainListenery extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new TeleportHrace(), this);
         getServer().getPluginManager().registerEvents(new OhnivaHulkaListener(this), this);
     }
-
-
 }

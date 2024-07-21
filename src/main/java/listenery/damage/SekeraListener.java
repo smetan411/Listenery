@@ -17,8 +17,8 @@ public class SekeraListener implements Listener {
         String vecVPraveRuce = player.getEquipment().getItemInMainHand().getItemMeta().getDisplayName();
         if (vecVPraveRuce.equals("Sekera")) {
             block.setType(Material.GOLD_BLOCK);
+            event.setCancelled(true);
         }
-        event.setCancelled(true);
     }
 }
 

@@ -20,10 +20,9 @@ public class DuhovaOvecka extends PlayerCommandExecutor {
         ovce.setCustomName("DuhovaOvecka");
         ovce.setCustomNameVisible(true);
 
-        Timer casovac = new Timer();
         ObarveniOvce barvi = new ObarveniOvce(ovce);
+        Timer casovac = new Timer();
         casovac.schedule(barvi, 0, 1000);
-
         return true;
     }
 
@@ -32,7 +31,6 @@ public class DuhovaOvecka extends PlayerCommandExecutor {
         private static DyeColor[] BARVY = {DyeColor.BLUE, DyeColor.GREEN, DyeColor.YELLOW, DyeColor.ORANGE, DyeColor.PINK,
                 DyeColor.PURPLE, DyeColor.RED, DyeColor.LIGHT_BLUE, DyeColor.LIME, DyeColor.WHITE};
         private int indexBarvy = 0;
-
         public ObarveniOvce(Sheep ovce) {
             this.ovce = ovce;
         }
