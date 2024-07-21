@@ -12,6 +12,7 @@ import org.bukkit.potion.PotionEffectType;
 
 public class ExcaliburListener implements Listener {
 
+    // zapaluje
     @EventHandler
     public void uderExkalibrem(EntityDamageByEntityEvent event) {
 

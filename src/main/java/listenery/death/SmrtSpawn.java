@@ -19,8 +19,6 @@ public class SmrtSpawn implements Listener {
             World svet = smrt.getEntity().getWorld();
             Location misto = smrt.getEntity().getLocation();
             svet.spawnEntity(misto.add(5,0,5), EntityType.WITHER_SKELETON);
-            svet.spawn(misto.add(2,0,2), WitherSkeleton.class);
-            svet.spawnEntity(misto, EntityType.ENDER_CRYSTAL);
         }
     }
 }

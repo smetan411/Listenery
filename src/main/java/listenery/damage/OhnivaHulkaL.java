@@ -14,11 +14,11 @@ import org.bukkit.scheduler.BukkitScheduler;
 //lore je popisek
 //player sneaking je hráč se plíží, držíme shift
 
-public final class OhnivaHulkaListener implements Listener {
+public final class OhnivaHulkaL implements Listener {
     private final BukkitScheduler scheduler = Bukkit.getScheduler();
     private Plugin plugin;
 
-    public OhnivaHulkaListener(Plugin plugin) {
+    public OhnivaHulkaL(Plugin plugin) {
         this.plugin = plugin;
     }
 

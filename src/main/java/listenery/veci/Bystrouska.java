@@ -9,7 +9,7 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 
-public class LiskaBystrouska extends PlayerCommandExecutor {
+public class Bystrouska extends PlayerCommandExecutor {
 
     @Override
     public boolean onCommandPlayer(Player player, World world, Location playerLocation, String[] args) {

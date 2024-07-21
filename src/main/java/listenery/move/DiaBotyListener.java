@@ -7,10 +7,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.plugin.Plugin;
-import org.bukkit.scheduler.BukkitRunnable;
 
-public class ChuzeDiamant implements Listener {
+public class DiaBotyListener implements Listener {
 
     @EventHandler
     public void diamondMove(PlayerMoveEvent event) {

@@ -14,7 +14,7 @@ import org.bukkit.util.Vector;
 
 import java.util.List;
 
-public class KladivoListener implements Listener {
+public class KladivoL implements Listener {
     @EventHandler
     public void uhozeni (EntityDamageByEntityEvent event) {
         Entity cil = event.getDamager();

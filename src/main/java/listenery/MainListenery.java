@@ -4,12 +4,10 @@ import listenery.damage.*;
 import listenery.death.SmrtSpawn;
 import listenery.death.SmrtPojmenovaneEntity;
 import listenery.death.Drops;
-import listenery.move.ChuzeDiaMizeni;
-import listenery.move.ChuzeDiamant;
-import listenery.move.TeleportHrace;
-import listenery.target.BleskHelmaListener;
+import listenery.move.DiaBotyMizeni;
+import listenery.move.DiaBotyListener;
+import listenery.death.BleskHelmaListener;
 import listenery.veci.*;
-import org.bukkit.World;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class MainListenery extends JavaPlugin {
@@ -27,15 +25,14 @@ public final class MainListenery extends JavaPlugin {
         getCommand("-duhovaOvecka").setExecutor(new DuhovaOvecka());
         getCommand("-diaBoty").setExecutor(new DiamantoveBoty());
         getCommand("-bleskovaHelma").setExecutor(new BleskovaHelma());
-        getCommand("-liskaBystrouska").setExecutor(new LiskaBystrouska());
+        getCommand("-liskaBystrouska").setExecutor(new Bystrouska());
         getCommand("-sekera").setExecutor(new Sekera());
         getCommand("-motyka").setExecutor(new Sekera());
-        getCommand("-netherPortal").setExecutor(new PortalDoNetheru());
         getCommand("-ohnivaHulka").setExecutor(new OhnivaHulka());
 
         // listenery
-        getServer().getPluginManager().registerEvents(new ChuzeDiamant(), this);
-        getServer().getPluginManager().registerEvents(new ChuzeDiaMizeni(this), this);
+        getServer().getPluginManager().registerEvents(new DiaBotyListener(), this);
+        getServer().getPluginManager().registerEvents(new DiaBotyMizeni(this), this);
 
         getServer().getPluginManager().registerEvents(new EndMecListener(), this);
         getServer().getPluginManager().registerEvents(new ExcaliburListener(), this);
@@ -47,8 +44,7 @@ public final class MainListenery extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new BleskHelmaListener(), this);
         getServer().getPluginManager().registerEvents(new SmrtPojmenovaneEntity(), this);
         getServer().getPluginManager().registerEvents(new SekeraListener(), this);
-        getServer().getPluginManager().registerEvents(new KladivoListener(), this);
-        getServer().getPluginManager().registerEvents(new TeleportHrace(), this);
-        getServer().getPluginManager().registerEvents(new OhnivaHulkaListener(this), this);
+        getServer().getPluginManager().registerEvents(new KladivoL(), this);
+        getServer().getPluginManager().registerEvents(new OhnivaHulkaL(this), this);
     }
 }

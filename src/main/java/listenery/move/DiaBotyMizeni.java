@@ -10,11 +10,11 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
-public class ChuzeDiaMizeni implements Listener {
+public class DiaBotyMizeni implements Listener {
 
     private final Plugin plugin;  // mizeni
 
-    public ChuzeDiaMizeni(Plugin plugin) {
+    public DiaBotyMizeni(Plugin plugin) {
         this.plugin = plugin;
     }  // mizeni
 
