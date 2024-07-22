@@ -16,7 +16,7 @@ public class Bystrouska extends PlayerCommandExecutor {
         Fox liska = world.spawn(playerLocation, Fox.class);
         liska.setCustomName("Bystrouska");
         liska.setCustomNameVisible(true);
-        liska.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 999999999, 3));
+        liska.addPotionEffect(new PotionEffect(PotionEffectType.SLOWNESS, 999999999, 3));
         return true;
     }
 }

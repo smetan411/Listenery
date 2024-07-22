@@ -13,9 +13,9 @@ public class BleskovaHelma extends PlayerCommandExecutor {
     @Override
     public boolean onCommandPlayer(Player player, World world, Location playerLocation, String[] args) {
         ItemStack helma = new ItemStack(Material.DIAMOND_HELMET, 1);
-        helma.addEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 3);
-        helma.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 4);
-        helma.addEnchantment(Enchantment.PROTECTION_FIRE, 3);
+        helma.addEnchantment(Enchantment.PROTECTION, 3);
+        helma.addEnchantment(Enchantment.PROJECTILE_PROTECTION, 4);
+        helma.addEnchantment(Enchantment.FIRE_PROTECTION, 3);
         helma.addEnchantment(Enchantment.THORNS, 3);
 
         ItemMeta vlastnost = helma.getItemMeta();

@@ -38,7 +38,7 @@ public final class OhnivaHulkaL implements Listener {
                 }
             } else {
                 player.launchProjectile(LargeFireball.class); // hrac vystreli projektil
-                world.spawnParticle(Particle.SMOKE_LARGE, player.getLocation(), 80);
+                world.spawnParticle(Particle.SMOKE, player.getLocation(), 80);
             }
         }
     }
